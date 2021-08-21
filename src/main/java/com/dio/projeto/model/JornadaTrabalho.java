@@ -1,8 +1,10 @@
 package com.dio.projeto.model;
 
 import lombok.*;
+import org.hibernate.envers.Audited;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -14,9 +16,10 @@ import javax.persistence.Id;
 @EqualsAndHashCode
 @Builder
 @Entity
+@Audited
 public class JornadaTrabalho {
     @Id
-    @GeneratedValue
-    private long id;
+    @GeneratedValue()
+    private Long id;
     private String descricao;
 }
